@@ -1,0 +1,104 @@
+@import "../scss/mixin.scss";
+@import "../scss/variables.scss";
+
+.auth-con {
+  width: 450px;
+  height: 450px;
+  background-color: #f1f4f5;
+  border-radius: 15px;
+  box-shadow: 0 0 30px 5px rgba(86, 121, 171, 0.1);
+  padding: 10px;
+  flex-direction: column;
+  gap: 20px;
+  @include d-flex(space-evenly, center);
+  .text-con {
+    width: 100%;
+    padding: 5px;
+    gap: 5px;
+    @include d-flex(center, center);
+    text-transform: uppercase;
+    flex-direction: column;
+    h1 {
+      color: $orange-color;
+    }
+    small {
+      color: $orange-color;
+    }
+  }
+  .form {
+    width: 100%;
+    @include d-flex(center, center);
+    flex-direction: column;
+    gap: 50px;
+    .input-con {
+      position: relative;
+
+      @include d-flex(start, center);
+      .input {
+        right: 0;
+        top: -11px;
+        position: absolute;
+        width: 90%;
+      }
+    }
+    .button-con {
+      width: 100%;
+      @include d-flex(center, center);
+      flex-direction: column;
+      gap: 15px;
+      .form-btn {
+        width: 50%;
+        background-color: $orange-color;
+      }
+      .link {
+        color: $orange-color;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include responsive(360px) {
+  .auth-con {
+    width: 320px;
+  }
+  .MuiFormLabel-root {
+    font-size: 14px !important;
+  }
+  .text-con h3 {
+    font-size: 16px;
+  }
+  .input-con {
+    width: 90%;
+    .MuiFormHelperText-root{
+      font-size: 11px !important;
+    }
+  }
+}
+
+@include responsive(480px) {
+  .sign-up-con {
+    width: 400px;
+  }
+  .MuiFormLabel-root {
+    font-size: 16px !important;
+  }
+  .text-con h3 {
+    font-size: 18px;
+  }
+}
+
+@include responsive(640px) {
+  .auth-con {
+    width: 450px;
+  }
+  .text-con h3 {
+    font-size: 20.8px;
+  }
+  .input-con {
+    width: 80%;
+    .MuiFormHelperText-root{
+      font-size: 13px !important;
+    }
+  }
+}

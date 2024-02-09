@@ -1,0 +1,17 @@
+@mixin d-flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin btn-style {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@mixin responsive($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

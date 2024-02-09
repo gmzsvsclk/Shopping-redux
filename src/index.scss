@@ -1,0 +1,20 @@
+@import "./scss/mixin.scss";
+@import "./scss/variables.scss";
+
+@font-face {
+  font-family: "poppins";
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+  font-family: "poppins" !important;
+  padding: 0;
+  margin: 0;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8e7f6;
+  @include d-flex(center, center);
+}
